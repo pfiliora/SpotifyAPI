@@ -35,7 +35,7 @@ html, body {
 /*	top: 0;*/
 
 	box-sizing: border-box;
-	padding-left: 20%;
+	padding-left: 300px;
 }
 
 #spotify-player .main {
@@ -132,7 +132,7 @@ html, body {
 	margin-left: 200px;
 }
 .cs_itemBar {
-	margin-left: 100px;
+	margin-left: 10px;
 }
 
 .pageWrapper {
@@ -343,7 +343,7 @@ html, body {
 
 #spotify-player .playlistTitle {
 	margin-top: 70px;
-	color: white !important;
+	color: white;
 	font-family: 'Della Respira', serif;
 	font-size: large
 }
@@ -351,6 +351,11 @@ html, body {
 #spotify-player .playlistBar {
 	width: 300px;
 	overflow: hidden;
+/*	margin-top: 50px !important;*/
+/*	margin-left: 50px !important;*/
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 20px;
+/*	height: 500px !important;*/
 }
 
 .searchTitle {

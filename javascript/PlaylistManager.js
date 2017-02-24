@@ -10,7 +10,7 @@ PlaylistManager.currentSong = 0;
 
 PlaylistManager.addTrack = (track = reqParam()) => {
     PlaylistManager.tracks.push(track);
-//	PlaylistManager.saveData(PlaylistManager.tracks)
+//	PlaylistManager.saveData(PlaylistManager.tracks = "")
 }; // PlaylistManager.addTrack
 
 PlaylistManager.removeById = (id) => {

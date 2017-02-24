@@ -32,7 +32,8 @@ function reqParam() {
         addToPlaylistBtn.addEventListener('click',() => {
             PlaylistManager.addTrack(track);
             const currentIndex = PlaylistManager.tracks.length - 1;
-
+ 
+			
             const playlistTrack = document.createElement('div');
             playlistTrack.classList.add('item', 'playlist-track', 'trackid-' + id);
             playlistTrack.innerHTML = `				
@@ -40,7 +41,7 @@ function reqParam() {
 				  <img src="${imageUrl}">
 				</div>
 				<div>
-					<a href="#" class="playlist-close js-playlist-close">
+					<a href="#" class="playlist-close js-playlist-close" data-tooltip="Remove from playlist." data-position="top right" data-inverted="">
 						<i class="icon remove"></i>	
 					</a>
 					<div class="middle aligned content playlist-content">
@@ -67,7 +68,7 @@ function reqParam() {
 
                 setTimeout(() => {
                     document.querySelector(`.trackid-${nextTrackId} audio`).play();
-                }, 500);
+                }, 50);
                 
             })
 
@@ -101,6 +102,8 @@ function reqParam() {
 			}
 		});
     }
+//	document.querySelector('.pause') ? 'true' : 'false'
+
 
     const button = document.querySelector('.js-search');
     const input = document.querySelector('.js-input');
@@ -126,14 +129,16 @@ function reqParam() {
        return html;
     	};
 	
-//	const rightCol = document.querySelector('.js-colRight')
+//	
 	
-//	const showSearched = (query) => {			
+	const showSearched = (query) => {	
+		const searchTitle = document.querySelector('.js-searchTitle')
+		searchTitle.innerHTML = 'Search Results for ' + query + '...'
 //        let html = `
 //				<div class="searchTitle js-searchTitle">Search Results for${query}</div>
 //				`;
 //       return html;
-//    	};
+    	};
 			
 
 									   
@@ -148,7 +153,7 @@ function reqParam() {
                 input.setAttribute('disabled', 'disabled');
                 button.setAttribute('disabled', 'disabled');
 
-//				rightCol.innerHTML = showSearched(query);
+				showSearched(query);
                 return SpotifyAPI.search(query);
             })
             .then((data) => {

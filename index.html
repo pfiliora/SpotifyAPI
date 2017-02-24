@@ -10,67 +10,66 @@
 
 </head>
 <body id="spotify-player">
-	<div class="pageWrapper">
+<!--
 		<div class="ui top fixed menu inverted cs_fixedBar fontStuff">
 	    	<div class="ui item cs_itemBar">
 		    	<img src="http://www.iconsdb.com/icons/preview/white/music-2-xxl.png">
-		    	<span class="fontStuff">&nbsp SpotMe!</span>
+		    	<span class="fontStuff">&nbsp Spotify JukeBox!</span>
 		  	</div>
+-->
+<!--
 			  <div class="ui category search item right cs_searchBar">
 			  <i class="search icon js-search fontStuff"></i>
 				<div class="ui transparent icon input fontStuff">
 					<input type="text" placeholder="Search for a song..." class="js-input input__search fontStuff">
 				</div>
-				<div class="results"></div>
-			  </div>
-		</div>
-		<br>
+-->
+<!--				<div class="results"></div>-->
+<!--			  </div>-->
+<!--		</div>-->
+<!--		<br>-->
 
 <!--		Main Area		-->
 <!--		<div class="ui segment clearfix">-->
 		
 <!--		Left Playlist Column-->
-<!--			<div class="ui sidebar left inverted vertical menu visible">-->
-		
+			
 			<div class="ui visible sidebar playlistBar">
- 				<div class="playlistTitle">Playlist Bar</div>
+			<div class="ui item cs_itemBar">
+		    	<img style="width: 20px" src="http://www.iconsdb.com/icons/preview/white/music-2-xxl.png">
+		    	<span class="fontStuff">&nbsp Spotify JukeBox</span>
+		  	</div>
+			<div class="ui divider"></div>
+				<div class="ui transparent icon input fontStuff">
+					<i class="search icon js-search"></i>
+					<input type="text" placeholder="Search..." class="js-input input__search fontStuff">
+				</div>
+			<div class="ui divider"></div>
+ 				<div class="playlistTitle js-playlistTitle">Playlist Bar</div>
   				<div class="ui divided items js-playlist">
   				</div>
 			</div>
-<!--
-
-			<div class="col__left">
-				<div>Playlist</div>
- 				<br>
-  				<div class="ui divided items js-playlist">
-  					
-  				</div>
-   			</div>
--->
     		
 <!--		/End Left Playlist Column-->
 	   	
 <!--		Right Results Column-->
 		   	<div class="col__right js-colRight">
-		   		
-				<div class="main">
-				<div class="ui cards">
-  					<div class="js-searchresult ui cards">
+		   		<div class="searchTitle js-searchTitle"></div>
+				<div class="main">				
+					<div class="ui link cards">
+						<div class="js-searchresult ui cards">
+						</div>
 					</div>
-				</div>
 				</div>
 			</div>
 <!--		</div>-->
-	</div>
+	
 <!--		/End Main Area		-->
 
 		<script src="javascript/PlaylistManager.js"></script>
 		<script src="javascript/SpotifyAPI.js"></script>
 		<script src="javascript/app.js"></script>
 		<script src="javascript/Slideshow.js"></script>
-		
-<!--<script src="semantic/dist/semantic.min.js"></script>-->
-<!--<script src="scripts/main.js"></script>-->
 
 </body>
 </html>
