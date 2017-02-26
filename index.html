@@ -4,50 +4,27 @@
 	<meta charset="utf-8">
     <title>Spotify Player</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Della+Respira" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 
 
 </head>
 <body id="spotify-player">
-<!--
-		<div class="ui top fixed menu inverted cs_fixedBar fontStuff">
-	    	<div class="ui item cs_itemBar">
-		    	<img src="http://www.iconsdb.com/icons/preview/white/music-2-xxl.png">
-		    	<span class="fontStuff">&nbsp Spotify JukeBox!</span>
-		  	</div>
--->
-<!--
-			  <div class="ui category search item right cs_searchBar">
-			  <i class="search icon js-search fontStuff"></i>
-				<div class="ui transparent icon input fontStuff">
-					<input type="text" placeholder="Search for a song..." class="js-input input__search fontStuff">
-				</div>
--->
-<!--				<div class="results"></div>-->
-<!--			  </div>-->
-<!--		</div>-->
-<!--		<br>-->
 
-<!--		Main Area		-->
-<!--		<div class="ui segment clearfix">-->
 		
 <!--		Left Playlist Column-->
-			
 			<div class="ui visible sidebar playlistBar">
-			<div class="ui item cs_itemBar">
-		    	<img style="width: 20px" src="http://www.iconsdb.com/icons/preview/white/music-2-xxl.png">
-		    	<span class="fontStuff">&nbsp Spotify JukeBox</span>
-		  	</div>
-			<div class="ui divider"></div>
+				<div class="ui item cs_itemBar">
+					<img style="width: 20px" src="http://www.iconsdb.com/icons/preview/white/music-2-xxl.png">
+					<span class="fontStuff">&nbsp Spotify JukeBox</span>
+				</div>
+				<div class="ui divider"></div>
 				<div class="ui transparent icon input fontStuff">
 					<i class="search icon js-search"></i>
 					<input type="text" placeholder="Search..." class="js-input input__search fontStuff">
 				</div>
-			<div class="ui divider"></div>
+				<div class="ui divider"></div>
  				<div class="playlistTitle js-playlistTitle">Playlist Bar</div>
-  				<div class="ui divided items js-playlist">
-  				</div>
+  				<div class="ui divided items js-playlist"></div>
 			</div>
     		
 <!--		/End Left Playlist Column-->
@@ -62,9 +39,7 @@
 					</div>
 				</div>
 			</div>
-<!--		</div>-->
-	
-<!--		/End Main Area		-->
+<!--		/Right Results Column-->
 
 		<script src="javascript/PlaylistManager.js"></script>
 		<script src="javascript/SpotifyAPI.js"></script>

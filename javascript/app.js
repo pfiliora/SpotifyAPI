@@ -47,7 +47,7 @@ function reqParam() {
 					<div class="middle aligned content playlist-content">
 				  		&nbsp${name} - ${artistName}
 					</div>
-					<audio controls style="width: 215px;">
+					<audio controls style="width: 175px;">
 						<source src="${preview_url}">
 					</audio>
 				</div>
@@ -134,10 +134,6 @@ function reqParam() {
 	const showSearched = (query) => {	
 		const searchTitle = document.querySelector('.js-searchTitle')
 		searchTitle.innerHTML = 'Search Results for ' + query + '...'
-//        let html = `
-//				<div class="searchTitle js-searchTitle">Search Results for${query}</div>
-//				`;
-//       return html;
     	};
 			
 
