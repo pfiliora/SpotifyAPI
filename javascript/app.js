@@ -1,12 +1,8 @@
-/*******************
-    GENERAL UTILITY FUNCTIONS
-********************/
-
 function reqParam() {
     throw new Error('This is a required param!');
 }
 
-(function() { // protect the lemmings!
+(function() {
 
 	const validateSearch = (value) => {
         return new Promise((resolve, reject) => {
@@ -52,7 +48,6 @@ function reqParam() {
 					</audio>
 				</div>
             `;
-			
 
             playlist.appendChild(playlistTrack);
 
@@ -63,14 +58,13 @@ function reqParam() {
             });
 
             audio.addEventListener('ended', () => {
-                console.log('done!')
+                console.log('done!');
                 const nextTrackId = PlaylistManager.getNextSong();
 
                 setTimeout(() => {
                     document.querySelector(`.trackid-${nextTrackId} audio`).play();
-                }, 50);
-                
-            })
+                }, 50); 
+            });
 
            const closeBtn = playlistTrack.querySelector('.js-playlist-close');
            closeBtn.addEventListener('click', () => {
@@ -84,8 +78,8 @@ function reqParam() {
                 PlaylistManager.removeById(id);
 
                 playlist.removeChild(playlistTrack);
-           })
-        })
+           });
+        });
 
 		const audio = new Audio(preview_url);
 		const uiPlayButton = div.querySelector('.playButton');
@@ -101,9 +95,7 @@ function reqParam() {
 				uiPlayButton.classList.add('play');
 			}
 		});
-    }
-//	document.querySelector('.pause') ? 'true' : 'false'
-
+    };
 
     const button = document.querySelector('.js-search');
     const input = document.querySelector('.js-input');
@@ -127,16 +119,12 @@ function reqParam() {
 					</a>
 				`;
        return html;
-    	};
-	
-//	
+    };
 	
 	const showSearched = (query) => {	
 		const searchTitle = document.querySelector('.js-searchTitle')
 		searchTitle.innerHTML = 'Search Results for ' + query + '...'
-    	};
-			
-
+    };
 									   
     const runSearchQuery = () => {
         const {value} = input;
@@ -153,13 +141,9 @@ function reqParam() {
                 return SpotifyAPI.search(query);
             })
             .then((data) => {
-                // bring back the input fields
                 input.removeAttribute('disabled');
                 button.removeAttribute('disabled');
-                // clear search results
-                results.innerHTML = "";
-                // append new results
-				
+                results.innerHTML = "";				
 				
                 const tracks = data.tracks.items;
                 for(const track of tracks) {
@@ -179,17 +163,11 @@ function reqParam() {
     ***/
 
     button.addEventListener('click', (e) => runSearchQuery());
-    // ^^^^ shortcuts
     input.addEventListener('keydown', (e) => {
         const {keyCode, which} = e;
-        // ^^^^ equivalent to: const keyCode = e.keyCode
-        //                     const which = e.which
-        // this is called object destructuring #es6
-
         if (keyCode === 13 || which === 13) {
            runSearchQuery();
         }
     });
-
 
 })();
