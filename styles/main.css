@@ -5,37 +5,17 @@ html, body {
 	min-height: 100%;
 }
 
-#spotify-player .col {
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-}
-
 #spotify-player .col__left {
-/*	float: left;*/
 	width: 300px;
 	height: 100%;
-/*	background-color: #292929;*/
 	overflow: hidden;
-
 	min-width: 100px;
-
 }
 
 #spotify-player .col__right {
-/*	float: left;*/
-/*	width: 78%;*/
-/*	height: 100%;*/
 	overflow: auto;
-/**/
-/*	position: fixed;*/
-/*	left: 0;*/
-/*	top: 0;*/
-
 	box-sizing: border-box;
-	padding-left: 20%;
+	padding-left: 300px;
 }
 
 #spotify-player .main {
@@ -58,28 +38,13 @@ html, body {
 	cursor: pointer;
 }
 
-#spotify-player .search-results {
-/*
-	justify-content: center;
-    margin-top: 30px;
-*/
-}
-
 #spotify-player .playlist-track{
 	background-color: ghostwhite;
 }
 
 #spotify-player .playlist-content{
-/*	color: white;*/
 	margin-left: 5px;
-}
-
-
-.landingImage {
-/*	min-height: 800px;*/
-/*	background-position: center;*/
-/*	background-size: cover;*/
-/*	background-image:url('../assets/images/dandelion blue.jpg');*/
+	width: 175px;
 }
 
 .slogan_larger_text {
@@ -90,12 +55,8 @@ html, body {
 	font-weight: bold;
 }
 
-.cs_fixedBar {
-/*	background-color: #000A3B !important;*/
-}
-
 .cs_searchBar {
-		width: 900px;
+	width: 900px;
 }
 
 .fontStuff {
@@ -118,7 +79,6 @@ html, body {
 	font-size: larger;
    top: 50%;
    left: 40%;
-/*   margin: -20px 20px 0 0;*/
 }
 
 
@@ -129,19 +89,14 @@ html, body {
 }
 
 .playlist-close{
-	margin-left: 200px;
+	margin-left: 160px;
 }
 .cs_itemBar {
-	margin-left: 100px;
-}
-
-.pageWrapper {
-/*	marg*/
-		
+	margin-left: 10px;
 }
 
 
-/* Basic */
+/* Background Wallpaper*/
 
 	@-ms-viewport {
 		width: device-width;
@@ -167,17 +122,8 @@ html, body {
 		}
 
 	body {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
 		display: flex;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
 		flex-direction: column;
-		-moz-justify-content: center;
-		-webkit-justify-content: center;
-		-ms-justify-content: center;
 		justify-content: center;
 		background-color: #000;
 		padding: 2em 1em 1em 1em;
@@ -189,22 +135,13 @@ html, body {
 		}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
-			-moz-animation: none !important;
-			-webkit-animation: none !important;
-			-ms-animation: none !important;
 			animation: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-			-ms-transition: none !important;
 			transition: none !important;
 		}
 
 /* BG */
 
 	#bg {
-		-moz-transition: opacity 2s ease-in-out;
-		-webkit-transition: opacity 2s ease-in-out;
-		-ms-transition: opacity 2s ease-in-out;
 		transition: opacity 2s ease-in-out;
 		height: 100%;
 		left: 0;
@@ -216,9 +153,6 @@ html, body {
 	}
 
 		#bg div {
-			-moz-transition: opacity 3s ease, visibility 3s;
-			-webkit-transition: opacity 3s ease, visibility 3s;
-			-ms-transition: opacity 3s ease, visibility 3s;
 			transition: opacity 3s ease, visibility 3s;
 			background-size: cover;
 			height: 100%;
@@ -231,9 +165,6 @@ html, body {
 		}
 
 			#bg div.visible {
-				-moz-animation: bg 45s linear infinite;
-				-webkit-animation: bg 45s linear infinite;
-				-ms-animation: bg 45s linear infinite;
 				animation: bg 45s linear infinite;
 				opacity: 1;
 				visibility: visible;
@@ -244,32 +175,7 @@ html, body {
 					z-index: 2;
 				}
 
-				@media screen and (max-width: 1280px) {
-
-					#bg div.visible {
-						-moz-animation: bg 29.25s linear infinite;
-						-webkit-animation: bg 29.25s linear infinite;
-						-ms-animation: bg 29.25s linear infinite;
-						animation: bg 29.25s linear infinite;
-					}
-
-				}
-
-				@media screen and (max-width: 736px) {
-
-					#bg div.visible {
-						-moz-animation: bg 18s linear infinite;
-						-webkit-animation: bg 18s linear infinite;
-						-ms-animation: bg 18s linear infinite;
-						animation: bg 18s linear infinite;
-					}
-
-				}
-
 			#bg div:only-child {
-				-moz-animation-direction: alternate !important;
-				-webkit-animation-direction: alternate !important;
-				-ms-animation-direction: alternate !important;
 				animation-direction: alternate !important;
 			}
 
@@ -277,73 +183,19 @@ html, body {
 			opacity: 0;
 		}
 
-	@-moz-keyframes bg {
+@keyframes bg {
 		0% {
-			-moz-transform: translateX(0);
-			-webkit-transform: translateX(0);
-			-ms-transform: translateX(0);
 			transform: translateX(0);
 		}
 
 		100% {
-			-moz-transform: translateX(-25%);
-			-webkit-transform: translateX(-25%);
-			-ms-transform: translateX(-25%);
-			transform: translateX(-25%);
-		}
-	}
-
-	@-webkit-keyframes bg {
-		0% {
-			-moz-transform: translateX(0);
-			-webkit-transform: translateX(0);
-			-ms-transform: translateX(0);
-			transform: translateX(0);
-		}
-
-		100% {
-			-moz-transform: translateX(-25%);
-			-webkit-transform: translateX(-25%);
-			-ms-transform: translateX(-25%);
-			transform: translateX(-25%);
-		}
-	}
-
-	@-ms-keyframes bg {
-		0% {
-			-moz-transform: translateX(0);
-			-webkit-transform: translateX(0);
-			-ms-transform: translateX(0);
-			transform: translateX(0);
-		}
-
-		100% {
-			-moz-transform: translateX(-25%);
-			-webkit-transform: translateX(-25%);
-			-ms-transform: translateX(-25%);
-			transform: translateX(-25%);
-		}
-	}
-
-	@keyframes bg {
-		0% {
-			-moz-transform: translateX(0);
-			-webkit-transform: translateX(0);
-			-ms-transform: translateX(0);
-			transform: translateX(0);
-		}
-
-		100% {
-			-moz-transform: translateX(-25%);
-			-webkit-transform: translateX(-25%);
-			-ms-transform: translateX(-25%);
 			transform: translateX(-25%);
 		}
 	}
 
 #spotify-player .playlistTitle {
 	margin-top: 70px;
-	color: white !important;
+	color: white;
 	font-family: 'Della Respira', serif;
 	font-size: large
 }
@@ -351,6 +203,8 @@ html, body {
 #spotify-player .playlistBar {
 	width: 300px;
 	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 20px;
 }
 
 .searchTitle {

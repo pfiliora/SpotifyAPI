@@ -43,10 +43,8 @@
 							'assets/images/bg02.jpg': 'center',
 							'assets/images/bg03.jpg': 'center'
 						},
-
 					// Delay.
 						delay: 6000
-
 				};
 
 			// Vars.
@@ -69,7 +67,6 @@
 
 					// Add it to array.
 						$bgs.push($bg);
-
 				}
 
 			// Main loop.
@@ -101,7 +98,5 @@
 						}, settings.delay / 2);
 
 				}, settings.delay);
-
 		})();
-
 })();
