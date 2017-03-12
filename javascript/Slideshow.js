@@ -19,8 +19,8 @@
 		// window.addEventListener
 			(function(){if("addEventListener"in window)return;window.addEventListener=function(type,f){window.attachEvent("on"+type,f)}})();
 
-	// Vars.
-		var	$body = document.querySelector('body');
+	// const.
+		const	$body = document.querySelector('body');
 
 	// Disable animations/transitions until everything's loaded.
 		$body.classList.add('is-loading');
